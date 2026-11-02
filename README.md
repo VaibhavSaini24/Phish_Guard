@@ -43,18 +43,6 @@ Phish_Guard/
 
 Because this is a simple front-end project, you can run it by opening `index.html` directly in a browser.
 
-Alternatively, serve it locally:
-
-```bash
-python -m http.server 8000
-```
-
-Then open:
-
-```text
-http://localhost:8000
-```
-
 ## Tech Stack
 
 - HTML5
