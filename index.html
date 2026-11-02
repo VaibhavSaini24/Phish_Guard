@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishGuard - URL Security Scanner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="brand">
+            <span class="logo">🛡️</span>
+            <span>PhishGuard</span>
+        </div>
+        <span class="status">● SYSTEM ONLINE</span>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <div class="tag">CYBERSECURITY</div>
+            <h1>Phishing URL Detector</h1>
+            <p>
+                Analyze suspicious website links and identify
+                potential phishing indicators.
+            </p>
+        </section>
+
+        <section class="scanner card">
+            <h2>🔍 Scan a Website URL</h2>
+            <p>Enter a website address to analyze its security indicators.</p>
+
+            <form id="scanForm">
+                <div class="input-group">
+                    <input
+                        type="text"
+                        id="urlInput"
+                        placeholder="https://example.com"
+                        autocomplete="off"
+                        required
+                    >
+                    <button type="submit" id="scanButton">
+                        Scan URL
+                    </button>
+                </div>
+            </form>
+
+            <div class="examples">
+                Try:
+                <button class="example" data-url="https://example.com">
+                    Normal example
+                </button>
+                <button class="example" data-url="http://192.0.2.10/login">
+                    IP address example
+                </button>
+                <button class="example" data-url="http://secure-login-verify.test/account">
+                    Suspicious example
+                </button>
+            </div>
+        </section>
+
+        <section id="resultSection" class="card results hidden">
+            <h2>Scan Results</h2>
+
+            <div class="result-top">
+                <div>
+                    <p class="muted">Risk classification</p>
+                    <h2 id="riskLabel">Analyzing...</h2>
+                </div>
+
+                <div class="score-circle">
+                    <span id="riskScore">0</span>
+                    <small>/100</small>
+                </div>
+            </div>
+
+            <div class="progress">
+                <div id="scoreBar"></div>
+            </div>
+
+            <p id="scannedUrl" class="scanned-url"></p>
+
+            <h3>Detected Security Indicators</h3>
+            <div id="indicatorList"></div>
+
+            <p class="disclaimer">
+                This result is based on URL heuristics only.
+                It does not guarantee that a website is safe or malicious.
+            </p>
+        </section>
+
+        <section class="card history">
+            <div class="history-heading">
+                <h2>Recent Scan History</h2>
+                <button id="clearHistory" class="clear-btn">
+                    Clear History
+                </button>
+            </div>
+            <div id="historyList">
+                <p class="muted">No scans yet.</p>
+            </div>
+        </section>
+
+        <section class="info-grid">
+            <div class="card info-card">
+                <span>🔐</span>
+                <h3>HTTPS Detection</h3>
+                <p>Checks whether the URL uses HTTPS.</p>
+            </div>
+
+            <div class="card info-card">
+                <span>🌐</span>
+                <h3>IP Detection</h3>
+                <p>Checks for direct IP address URLs.</p>
+            </div>
+
+            <div class="card info-card">
+                <span>⚠️</span>
+                <h3>Keyword Detection</h3>
+                <p>Finds potentially suspicious URL words.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>PhishGuard | Cybersecurity</p>
+        <p>Educational use only. No external websites are contacted.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

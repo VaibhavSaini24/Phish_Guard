@@ -1,0 +1,295 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #08111f;
+    color: #e8eef7;
+    min-height: 100vh;
+}
+
+.header {
+    background: #101d30;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #243750;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 28px;
+}
+
+.status {
+    color: #4ade80;
+    font-size: 12px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 35px 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 10px;
+}
+
+.tag {
+    display: inline-block;
+    color: #38bdf8;
+    border: 1px solid #24516c;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin: 20px 0;
+}
+
+.hero p, .scanner p {
+    color: #9caec3;
+    line-height: 1.6;
+}
+
+.card {
+    background: #111f32;
+    border: 1px solid #253750;
+    border-radius: 14px;
+    padding: 25px;
+    margin-bottom: 22px;
+}
+
+.scanner h2, .history h2 {
+    margin-bottom: 12px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    background: #081525;
+    border: 1px solid #344b67;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+}
+
+input:focus {
+    border-color: #38bdf8;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#scanButton {
+    background: #0ea5e9;
+    color: white;
+    padding: 0 25px;
+}
+
+#scanButton:hover {
+    background: #0284c7;
+}
+
+.examples {
+    color: #9caec3;
+    margin-top: 18px;
+    font-size: 13px;
+}
+
+.example {
+    color: #38bdf8;
+    background: transparent;
+    margin: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.result-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.muted {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.score-circle {
+    width: 90px;
+    height: 90px;
+    border: 5px solid #0ea5e9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.score-circle small {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.progress {
+    background: #26374d;
+    height: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#scoreBar {
+    height: 100%;
+    width: 0%;
+    background: #0ea5e9;
+    transition: width 0.4s;
+}
+
+.scanned-url {
+    overflow-wrap: anywhere;
+    color: #38bdf8;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+#indicatorList {
+    margin-top: 15px;
+}
+
+.indicator {
+    padding: 13px;
+    margin-bottom: 9px;
+    border-radius: 8px;
+    background: #1a2b40;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.detected {
+    color: #f87171;
+}
+
+.not-detected {
+    color: #4ade80;
+}
+
+.disclaimer {
+    color: #94a3b8;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.history-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.clear-btn {
+    background: #293c55;
+    color: white;
+    padding: 9px 12px;
+}
+
+.history-item {
+    background: #1a2b40;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 10px;
+    overflow-wrap: anywhere;
+    font-size: 13px;
+}
+
+.history-item strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.info-card span {
+    font-size: 27px;
+}
+
+.info-card h3 {
+    margin: 12px 0;
+}
+
+.info-card p {
+    color: #94a3b8;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #94a3b8;
+    font-size: 12px;
+    line-height: 2;
+    border-top: 1px solid #253750;
+}
+
+@media (max-width: 650px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    #scanButton {
+        padding: 14px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        padding: 15px 5%;
+    }
+}
